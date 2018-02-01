@@ -1,4 +1,12 @@
 #!/bin/bash
+
+#ln -sf `pwd`/meteorologia.sh  /etc/zabbix/prev_tempo/
+#chmod +x `pwd`/meteorologia.sh
+#Agendamento:
+#50 * * * * /etc/zabbix/prev_tempo/meteorologia.sh
+#Documentacao completa: https://docs.google.com/document/d/1_moPTwEg68vutjaQqK-hxGNUeQzxsZkqAGiKVh-G0MU/edit
+
+
 DIR_TEMP=/etc/zabbix/prev_tempo
  [ -d $DIR_TEMP ] || mkdir -p $DIR_TEMP
 for cidade in `echo $cidade bento-goncalves-rs canela-rs vacaria-rs santa-cruz-do-sul-rs cachoeira-do-sul-rs gramado-rs taquara-rs porto-alegre-rs novo-hamburgo-rs sao-leopoldo-rs`
