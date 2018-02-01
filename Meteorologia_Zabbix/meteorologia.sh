@@ -9,6 +9,9 @@
 
 DIR_TEMP=/etc/zabbix/prev_tempo
  [ -d $DIR_TEMP ] || mkdir -p $DIR_TEMP
+
+#Escolhendo as cidades que tera o tempo monitorado. Altere conforme sua necessidade, consultando a url completa da cidade no site sensacaotermica...
+
 for cidade in `echo $cidade bento-goncalves-rs canela-rs vacaria-rs santa-cruz-do-sul-rs cachoeira-do-sul-rs gramado-rs taquara-rs porto-alegre-rs novo-hamburgo-rs sao-leopoldo-rs`
 do
 > $DIR_TEMP/$cidade.txt
